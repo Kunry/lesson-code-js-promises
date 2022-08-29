@@ -13,3 +13,11 @@ function func2() {
 }
 
 func1( func2 );
+const array = [2,3];
+
+const mapFunction = (e, _index, _array) => {
+  console.log(e);
+}
+array.map( (e, _index, _array) => {
+  console.log(e);
+})

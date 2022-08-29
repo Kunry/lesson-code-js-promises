@@ -8,5 +8,7 @@ const pr2 = new Promise((resolve, reject) => {
 
 
 pr2
-  .then((value) => console.log('Resolved with:', val))
+  .then((value) => console.log('Resolved with:', value))
   .catch((err) => console.log('catch() ->', err));
+
+  

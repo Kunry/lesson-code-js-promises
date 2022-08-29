@@ -12,7 +12,7 @@ function obtainDirections(step) {
       console.log( directions[step] );
 
       if (!directions[step]) reject('Instructions not found.')
-      else resolve();
+      else resolve(step);
     }, 2000); 
     
   })
@@ -20,8 +20,8 @@ function obtainDirections(step) {
 
 
 obtainDirections(0)
-  .then(() => obtainDirections(1) )
-  .then(() => obtainDirections(2) )
-  .then(() => obtainDirections(3) )
+.then((step) => { console.log(step); return obtainDirections(step + 1)} )
+.then((step) => { console.log(step); return obtainDirections(step + 1)} )
+.then((step) => { console.log(step); return obtainDirections(step + 1)} )
   .then(() => console.log('You arrived at your destination!') )
   .catch((err) => console.log(err));
